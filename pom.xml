@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.focusmr</groupId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <artifactId>focusmr-parent</artifactId>
 
     <packaging>pom</packaging>
@@ -23,7 +23,7 @@
         <connection>scm:git:git@svn.focusmr.co.at:focus-parent-pom.git</connection>
         <developerConnection>scm:git:git@svn.focusmr.co.at:focus-parent-pom.git</developerConnection>
         <url>http://svn/cgi-bin/cgit.cgi/</url>
-      <tag>focusmr-parent-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <developers>
