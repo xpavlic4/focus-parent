@@ -510,12 +510,12 @@
 
     <distributionManagement>
         <repository>
-            <id>focusmr-releases-repository</id>
+            <id>nexus</id>
             <name>Focusmr Releases Repository</name>
             <url>${focusmr.releases.repo.url}</url>
         </repository>
         <snapshotRepository>
-            <id>focusmr-snapshots-repository</id>
+            <id>nexus</id>
             <name>Focusmr Snapshots Repository</name>
             <url>${focusmr.snapshots.repo.url}</url>
         </snapshotRepository>
