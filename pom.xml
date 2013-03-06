@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -88,6 +89,7 @@
         <version.surefire.plugin>2.12.3</version.surefire.plugin>
         <version.taglist.plugin>2.4</version.taglist.plugin>
         <version.war.plugin>2.3</version.war.plugin>
+        <version.scala.plugin>3.1.0</version.scala.plugin>
 
         <!-- ***************** -->
         <!-- Repository Deployment URLs -->
@@ -157,6 +159,7 @@
         <pluginManagement>
             <!-- All plugins ordered by shortname (antrun, assembly ...) -->
             <plugins>
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
@@ -198,6 +201,13 @@
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>cobertura-maven-plugin</artifactId>
                     <version>${version.cobertura.plugin}</version>
+                    <configuration>
+                        <formats>
+                            <format>html</format>
+                            <format>xml</format>
+                        </formats>
+                        <check/>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -355,13 +365,18 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>${version.war.plugin}</version>
+                    <configuration>
+                        <!-- Java EE 6 doesn't require web.xml, Maven needs to
+                        catch up! -->
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                    </configuration>
                 </plugin>
-
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-
-
+                <plugin>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <version>${version.scala.plugin}</version>
+                </plugin>
             </plugins>
-
         </pluginManagement>
 
         <plugins>
