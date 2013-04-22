@@ -20,8 +20,8 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:git:git@svn.focusmr.co.at:focus-parent-pom.git</connection>
-        <developerConnection>scm:git:git@svn.focusmr.co.at:focus-parent-pom.git</developerConnection>
+        <connection>scm:git:ssh://git@collab.focusmr.co.at:7999/oa/focus-parent-pom.git</connection>
+        <developerConnection>scm:git:ssh://git@collab.focusmr.co.at:7999/oa/focus-parent-pom.git</developerConnection>
         <url>http://svn/cgi-bin/cgit.cgi/</url>
         <tag>HEAD</tag>
     </scm>
