@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -62,6 +63,7 @@
         <version.eclipse.plugin>2.9</version.eclipse.plugin>
         <version.ejb.plugin>2.3</version.ejb.plugin>
         <version.enforcer.plugin>1.2</version.enforcer.plugin>
+        <version.enunciate.plugin>1.26.2</version.enunciate.plugin>
         <version.failsafe.plugin>2.12.3</version.failsafe.plugin>
         <version.findbugs.plugin>2.5.2</version.findbugs.plugin>
         <version.idea.plugin>2.2</version.idea.plugin>
@@ -205,7 +207,7 @@
                             <format>html</format>
                             <format>xml</format>
                         </formats>
-                        <check />
+                        <check/>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -250,6 +252,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>${version.enforcer.plugin}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.enunciate</groupId>
+                    <artifactId>maven-enunciate-plugin</artifactId>
+                    <version>${version.enunciate.plugin}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
