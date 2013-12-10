@@ -20,7 +20,7 @@ Start out by adding the parent configuration to your pom.
     <parent>
       <groupId>com.focusmr</groupId>
       <artifactId>focusmr-parent</artifactId>
-      <version>0.0.1</version>
+      <version>0.0.8-SNAPSHOT</version>
     </parent>
 
 The pom includes properties which allow various build configuration to be 
